@@ -1,0 +1,9 @@
+
+*********************DATABASE DESIGN NOTES*********************
+
+* Data Modeling
+-  data modeling - is the process of creating a model for the data you want to store
+-  4 step understand the business requirements, build a conceptual model,
+    build logical model, and build physical model
+* Conceptual Model
+- conceptual model represent the entities and their relationship

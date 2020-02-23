@@ -12,5 +12,6 @@
 * Normalization
 - 1st normal form each cell should have a single value 
   and don't have repeated columns
-- 2nd normal every table should descibe one entity and every column in that
+- 2nd normal form every table should descibe one entity and every column in that
   table should describe that entity
+- 3rd normal form a column in a table should not be derived from other columns

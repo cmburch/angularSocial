@@ -1,14 +1,21 @@
 -- SELECT emp_no As "Employee #", birth_date AS "Birthday"
 -- FROM employees
 -- 
--- Select * 
--- From employees
+SELECT * 
+FROM employees;
 
 SELECT emp_no, Concat(first_name, ' ', last_name) AS "Full Name"
 FROM employees;
 
 -- Count how many employees are at the company
 SELECT count(emp_no) FROM employees;
+;
+-- Get employee with highest salary available 
+SELECT Max(salary) FROM salaries;
+
+-- Get the total amount of salaries paid
+SELECT Sum(salary) FROM salaries;
+
 
 
 

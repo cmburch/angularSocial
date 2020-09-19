@@ -5,7 +5,11 @@
 -- From employees
 
 SELECT emp_no, Concat(first_name, ' ', last_name) AS "Full Name"
-FROM employees
+FROM employees;
+
+-- Count how many employees are at the company
+SELECT count(emp_no) FROM employees;
+
 
 
 -- //Notes 

@@ -80,9 +80,21 @@ WHERE (state = 'OR' OR state = 'NY') AND gender = 'F';
 SELECT count(age) AS "Not_AGE_55" FROM customers
 WHERE NOT Age = '55';
 
+-- Comparison operators
+-- Who over the age of 44 has an income of 100 000 or more?
+SELECT age, income FROM customers
+WHERE age >= 44 AND income = 100000;
 
+-- Who between the ages of 30 and 50 has an income of less than 50 000?
+SELECT age FROM customers
+WHERE (age >= 30 AND age <= 50) AND income < 50000;
+
+-- What is the average income between the ages of 20 and 50?
+SELECT AVG(income) FROM customers
+WHERE age >= 20 AND age <= 50;
 
 -- //Notes 
 -- //2 types of functions are AGGREGATE and scalar FUNCTIONS
 -- // AGGREGATE functions combine a row of data and return single output
 -- // Scalar FUNCTIONS runs a function for each individual row and return multiple output
+-- //IS OPERATOR allows you to filter values that are null,not null, true or false

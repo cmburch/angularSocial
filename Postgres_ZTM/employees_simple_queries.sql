@@ -165,3 +165,5 @@ WHERE phone::TEXT ILIKE '302%';
 -- // AGGREGATE functions combine a row of data and return single output
 -- // Scalar FUNCTIONS runs a function for each individual row and return multiple output
 -- //IS OPERATOR allows you to filter values that are null,not null, true or false
+-- //Postgres only does the LIKE operator on text.
+-- //Note: Casting is the act of changing something to something else.

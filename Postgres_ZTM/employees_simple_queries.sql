@@ -70,7 +70,10 @@ SELECT Avg(lifeexpectancy) AS "life expectancy" FROM country;
 SELECT AVG(population) FROM city
 WHERE countrycode = 'NLD';
 
-
+--******************** Filtering 
+-- How many female customers do we have in the state of oregon and new york
+SELECT firstname, gender, state FROM customers
+WHERE (state = 'OR' OR state = 'NY') AND gender = 'F';  
 
 -- //Notes 
 -- //2 types of functions are AGGREGATE and scalar FUNCTIONS

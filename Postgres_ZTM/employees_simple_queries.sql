@@ -75,6 +75,13 @@ WHERE countrycode = 'NLD';
 SELECT firstname, gender, state FROM customers
 WHERE (state = 'OR' OR state = 'NY') AND gender = 'F';  
 
+-- Not Keyword
+-- How many customers are not 55
+SELECT count(age) AS "Not_AGE_55" FROM customers
+WHERE NOT Age = '55';
+
+
+
 -- //Notes 
 -- //2 types of functions are AGGREGATE and scalar FUNCTIONS
 -- // AGGREGATE functions combine a row of data and return single output

@@ -159,6 +159,10 @@ WHERE zip::TEXT ILIKE '2_1%';
 SELECT COALESCE(state,'No State') AS "State",phone FROM customers 
 WHERE phone::TEXT ILIKE '302%';
 
+--************** Time/Date
+SHOW TimeZone; -- local timezone of machine/computer 
+SET TIME ZONE 'UTC'; -- set timezone for current session ,but by default dates are stored in UTC Standarad
+
 
 -- //Notes 
 -- //2 types of functions are AGGREGATE and scalar FUNCTIONS

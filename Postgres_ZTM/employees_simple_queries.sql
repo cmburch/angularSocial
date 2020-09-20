@@ -163,6 +163,10 @@ WHERE phone::TEXT ILIKE '302%';
 SHOW TimeZone; -- local timezone of machine/computer 
 SET TIME ZONE 'UTC'; -- set timezone for current session ,but by default dates are stored in UTC Standarad
 
+--alter user timezone
+--ALTER USER [//FOR MACS USER NAME ON COMPUTER] SET timezone = 'UTC'
+
+
 
 -- //Notes 
 -- //2 types of functions are AGGREGATE and scalar FUNCTIONS

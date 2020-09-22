@@ -166,6 +166,39 @@ SET TIME ZONE 'UTC'; -- set timezone for current session ,but by default dates a
 --alter user timezone
 --ALTER USER [//FOR MACS USER NAME ON COMPUTER] SET timezone = 'UTC'
 
+--**********************
+
+--** DISTINCT OPERATOR
+/*
+* DB: Employees
+* Table: titles
+* Question: What unique titles do we have?
+*/
+
+SELECT DISTINCT title FROM titles;
+
+
+/*
+* DB: Employees
+* Table: employees
+* Question: How many unique birth dates are there?
+*/
+
+SELECT COUNT(DISTINCT birth_date)
+FROM employees;
+
+/*
+* DB: World
+* Table: country
+* Question: Can I get a list of distinct life expectancy ages
+* Make sure there are no nulls
+*/
+
+SELECT DISTINCT lifeexpectancy FROM country
+WHERE lifeexpectancy IS NOT NULL
+ORDER BY lifeexpectancy;
+
+--
 
 
 -- //Notes 

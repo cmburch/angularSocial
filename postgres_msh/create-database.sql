@@ -53,3 +53,32 @@ INSERT INTO invoices VALUES (17,'33-615-4694',3,126.38,68.10,'2019-07-30','2019-
 INSERT INTO invoices VALUES (18,'52-269-9803',5,180.17,42.77,'2019-05-23','2019-06-12','2019-01-08');
 INSERT INTO invoices VALUES (19,'83-559-4105',1,134.47,0.00,'2019-11-23','2019-12-13',NULL);
 
+
+-- CREATE TABLE 'payments' (
+--   'payment_id' int NOT NULL DEFAULT NEXTVAL (''payments'_seq'),
+--   'client_id' int NOT NULL,
+--   'invoice_id' int NOT NULL,
+--   'date' date NOT NULL,
+--   'amount' decimal(9,2) NOT NULL,
+--   'payment_method' smallint NOT NULL,
+--   PRIMARY KEY ('payment_id')
+--  ,
+--   CONSTRAINT 'fk_payment_client' FOREIGN KEY ('client_id') REFERENCES 'clients' ('client_id') ON UPDATE CASCADE,
+--   CONSTRAINT 'fk_payment_invoice' FOREIGN KEY ('invoice_id') REFERENCES 'invoices' ('invoice_id') ON UPDATE CASCADE,
+--   CONSTRAINT 'fk_payment_payment_method' FOREIGN KEY ('payment_method') REFERENCES 'payment_methods' ('payment_method_id')
+-- )   ;
+
+-- ALTER SEQUENCE 'payments'_seq RESTART WITH 9;
+
+-- CREATE INDEX 'fk_client_id_idx' ON 'payments' ('client_id');
+-- CREATE INDEX 'fk_invoice_id_idx' ON 'payments' ('invoice_id');
+-- CREATE INDEX 'fk_payment_payment_method_idx' ON 'payments' ('payment_method');
+-- INSERT INTO 'payments' VALUES (1,5,2,'2019-02-12',8.18,1);
+-- INSERT INTO 'payments' VALUES (2,1,6,'2019-01-03',74.55,1);
+-- INSERT INTO 'payments' VALUES (3,3,11,'2019-01-11',0.03,1);
+-- INSERT INTO 'payments' VALUES (4,5,13,'2019-01-26',87.44,1);
+-- INSERT INTO 'payments' VALUES (5,3,15,'2019-01-15',80.31,1);
+-- INSERT INTO 'payments' VALUES (6,3,17,'2019-01-15',68.10,1);
+-- INSERT INTO 'payments' VALUES (7,5,18,'2019-01-08',32.77,1);
+-- INSERT INTO 'payments' VALUES (8,5,18,'2019-01-08',10.00,2);
+
